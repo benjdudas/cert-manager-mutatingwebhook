@@ -1,9 +1,9 @@
 apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
-  name: "mymutatingwebhook.example.com"
+  name: "mutatingwebhook.caddyshack.org"
 webhooks:
-- name: "mymutatingwebhook.example.com"
+- name: "mutatingwebhook.caddyshack.org"
   objectSelector:
     matchLabels:
       app: cert-manager
@@ -52,7 +52,7 @@ metadata:
   namespace: kube-system
 spec:
   selector:
-    app: mutatingwebhook
+    app: cert-manager-wi-webhook
   ports:
     - protocol: TCP
       port: 443
