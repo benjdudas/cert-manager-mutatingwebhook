@@ -41,7 +41,7 @@ spec:
     spec:
       containers:
       - name: mutatingwebhook
-        image: wardviaene/mutatingwebhook-example
+        image: quay.io/bdudas/cert-manager-mutatingwebhook:0.0.1
         ports:
         - containerPort: 8443
 ---
