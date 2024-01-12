@@ -24,4 +24,4 @@ COPY --from=go-builder /home/bdudas/dev-cloud/mutating_webhook/cert-manager-muta
 
 USER app
 
-CMD ["./cert-manager-mutatingwebhook"]  
+CMD ["./mutatingwebhook"]  
