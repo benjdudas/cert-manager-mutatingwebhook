@@ -1,9 +1,9 @@
 apiVersion: admissionregistration.k8s.io/v1
 kind: MutatingWebhookConfiguration
 metadata:
-  name: "alpha-cert-manager-wi.caddyshack.org"
+  name: "add-cert-manager-wi-label"
 webhooks:
-- name: "alpha-cert-manager-wi.caddyshack.org"
+- name: "add-cert-manager-wi-label.caddyshack.org"
   objectSelector:
     matchLabels:
       app: cert-manager
