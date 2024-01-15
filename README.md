@@ -1,5 +1,10 @@
 # Mutating Webhook example
 
+## Remove the Workload identity label from cert-manager CSV
+Edit the cert-manager csv in the operator namespace and remove the `azure.workload.identity/use: "true"` label from `/spec/template/metadata/labels`.
+
+After this is removed scale the cert-manager deployment and verify that the label is no longer applied to the cert-manager pod.
+
 ## Setup the webhook
 
 ```
@@ -21,3 +26,5 @@ Then reapply the webhook using:
 ```
 kubectl apply -f webhook.yaml
 ```
+
+Scale the cert-manager deployment and verify that the `azure.workload.identity/use: "true"` has been applied to the new cert-manager Pod.
